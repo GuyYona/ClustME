@@ -1,5 +1,5 @@
 {
-    "exportDir": "\\\\ettin.mrc.ox.ac.uk\\Magill_Lab\\Guy\\ClustME\\figures\\tmp",
+    "exportDir": "..\\export",
     "exportData": true,
     "exportFigures": true,
     "loadSavedData": true,
