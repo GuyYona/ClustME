@@ -1,0 +1,8 @@
+{
+    "exportDir": "\\\\ettin.mrc.ox.ac.uk\\Magill_Lab\\Guy\\ClustME\\figures\\tmp",
+    "exportData": true,
+    "exportFigures": true,
+    "loadSavedData": true,
+    "runMode": "publication",
+    "_runMode": "runMode = debug|fast|publication"
+}
