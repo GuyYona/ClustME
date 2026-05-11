@@ -3,11 +3,11 @@ Version 1.0.0
 
 ## Overview
 
-ClustME implements a cluster-based permutation test for hierarchical 
-time-series data with repeated observations, subject- or unit-level structure, and trial-level predictors. 
-The test statistic at each time sample is a Generalized Least Squares (GLS) contrast derived from a linear mixed-effects (LME) model. 
+ClustME implements cluster-based permutation testing for hierarchical time-series data with repeated observations, subject- or unit-level structure, and trial-level predictors. It combines linear mixed-effects (LME) modelling with cluster-based inference to control the family-wise error rate (FWER), the probability of one or more false-positive cluster-level findings over the analysed time window.
 
-To make time-resolved mixed-effects inference computationally feasible, ClustME estimates a static marginal covariance matrix V at a reference timepoint and reuses it during null generation. This avoids exhaustive mixed-model refitting inside the randomisation loop, while preserving cluster-level inference when the selected randomisation method matches the design's exchangeability structure.
+Directly combining LMEs with cluster-based permutation testing is computationally prohibitive, because a full mixed-effects model would normally need to be refitted at every time sample and for every randomisation. ClustME avoids this by estimating a pooled, static estimate of the marginal covariance matrix `V` and reusing it during null generation.
+
+At each time sample, the test statistic is a Generalized Least Squares (GLS) contrast derived from the specified LME model. GLS uses the estimated covariance structure to account for hierarchical dependence that ordinary least-squares approaches would otherwise ignore. This makes FWER-controlled mixed-effects inference feasible on standard hardware, provided that the selected randomisation method matches the design's exchangeability structure.
 
 ## Installation
 
