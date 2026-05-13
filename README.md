@@ -20,7 +20,7 @@ At each time sample, the test statistic is a Generalized Least Squares (GLS) con
 Download or clone the repository, then add the repository root (not the `+clustme` folder) to the MATLAB path from the MATLAB Command Window: 
 
 ```matlab 
-addpath('/path/ClustME');
+addpath('/path/ClustME');   % update to your local repository path
 ```
 This adds ClustME for the current MATLAB session. To make the path persistent, you may then run:
 
